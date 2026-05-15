@@ -1,2 +1,15 @@
-title: Jasmine Anica Portfolio
+title: Jasmine Learnings
+email: jasmineanica@gmail.com
+description: >- 
+  A well-organized Jekyll site built from Markdown.
+baseurl: ""       # set to "/repo-name" for project pages, empty for user site
+url: "https://jasmineanica.github.io"
 theme: minima
+plugins:
+  - jekyll-feed
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
