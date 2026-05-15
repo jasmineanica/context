@@ -1,0 +1,60 @@
+---
+---
+
+@charset "utf-8";
+
+// Seamoss green palette — overrides minima defaults.
+// These must be declared before @import "minima" so the !default flags
+// inside minima pick up our values instead of its own.
+$brand-color:        #5f7a4f;
+$brand-color-light:  #889d7b;
+$brand-color-dark:   #3d5430;
+
+$text-color:         #2a3625;
+$background-color:   #f5f8f0;
+
+$link-base-color:    $brand-color-dark;
+$link-visited-color: $brand-color-dark;
+$link-hover-color:   $brand-color;
+
+$border-color-01:    $brand-color-light;
+$border-color-02:    #cdd8c1;
+$border-color-03:    $brand-color;
+
+$table-header-bg-color: #e6ecd9;
+$table-header-border:   #cdd8c1;
+$table-zebra-color:     #eef2e5;
+
+@import "minima";
+
+// Site header — add a green accent stripe and align the logo with the title.
+.site-header {
+  border-top: 5px solid $brand-color-dark;
+  border-bottom: 1px solid $border-color-02;
+  background-color: lighten($background-color, 1%);
+}
+
+.site-title,
+.site-title:visited {
+  color: $brand-color-dark;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-logo {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.site-nav .page-link {
+  color: $brand-color-dark;
+}
+
+// Posts list on the home page — softer dividers.
+.post-list > li {
+  border-bottom: 1px dashed $border-color-02;
+  padding-bottom: 1rem;
+}
