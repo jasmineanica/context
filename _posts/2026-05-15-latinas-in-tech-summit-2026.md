@@ -4,7 +4,7 @@ title: "I'm attending the Latinas in Tech Summit 2026"
 date: 2026-05-15
 ---
 
-![LIT Summit 2026 — I'm Attending, See You Online! May 21, Virtual]({{ "/assets/images/lit-summit-2026.png" | relative_url }})
+![LIT Summit 2026 — I'm Attending, See You Online! May 21, Virtual]({{ "/assets/images/lit-summit-2026.jpg" | relative_url }})
 
 I just signed up for the **Latinas in Tech Summit 2026** 💻✨
 
