@@ -2,8 +2,8 @@ title: Jasmine Learnings
 email: jasmineanica@gmail.com
 description: >-
   A well-organized Jekyll site built from Markdown.
-baseurl: "/context"
-url: "https://jasmineanica.github.io"
+baseurl: ""
+url: "https://jasmineanica.com"
 theme: minima
 
 header_pages:
