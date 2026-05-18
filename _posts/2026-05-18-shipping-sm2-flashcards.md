@@ -80,6 +80,7 @@ Paste that into Render → service → **Environment** tab → `DATABASE_URL`. S
 - **PEP 695 generics need Python 3.12.** I tried local syntax checks with the system's Python 3.9 — they fail, but CI is on 3.12 so it doesn't matter. Just know your local interpreter is lying to you.
 - **Render's blueprint syntax is forgiving.** It auto-detected my Dockerfile, used the healthcheck path from `render.yaml`, and respected the `sync: false` flag on `DATABASE_URL` so it wouldn't try to fill in a value itself.
 - **Empty-state matters in a demo.** The README claimed "Trie autocomplete on tags," but with an empty DB the autocomplete did nothing. I added a lifespan-hook seeder that drops six interview-prep cards on first boot, plus a search box on the home page that actually exercises the Trie via HTMX. Now the claim is visible, not just true.
+- **`hx-ext="json-enc"` is silent if the extension script isn't loaded.** I had the attribute on my form but forgot the `<script src=".../json-enc.js">` tag, so HTMX quietly fell back to `application/x-www-form-urlencoded`, FastAPI couldn't parse the body as a JSON object, and every Save returned a 422 with `model_attributes_type`. Two-part fix: load the extension *and* add a Pydantic `field_validator` on `tags` so the same `/api/cards` endpoint accepts both `tags: ["a","b"]` (JSON clients) and `tags: "a, b"` (the form's single text input).
 
 ## What's next
 
