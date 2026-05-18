@@ -7,6 +7,7 @@ url: "https://jasmineanica.com"
 theme: minima
 
 header_pages:
+  - projects.md
   - about.md
   - ai-ideas.md
 
