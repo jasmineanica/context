@@ -3,5 +3,5 @@
   tagline: Spaced-repetition flashcards for interview prep
   concepts: [Trie, Priority Queue, Hash Map, SM-2 Algorithm]
   repo: https://github.com/jasmineanica/sm2-flashcards
-  demo: https://sm2-flashcards.fly.dev
+  demo: https://sm2-flashcards.onrender.com
   status: wip

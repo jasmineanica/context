@@ -25,7 +25,7 @@ Not a toy demo. A problem where the concept is the *right* answer, not a stretch
 
 ## 3. Scaffold from the template
 
-Copy the layout from [`sm2-flashcards`](https://github.com/jasmineanica/sm2-flashcards): `Dockerfile`, `.github/workflows/ci.yml`, `Makefile`, README template, `pyproject.toml`.
+Copy the layout from [`sm2-flashcards`](https://github.com/jasmineanica/sm2-flashcards): `Dockerfile`, `.github/workflows/ci.yml`, `Makefile`, README template, `pyproject.toml`, `render.yaml`.
 
 ## 4. Build the core from scratch
 
@@ -33,7 +33,7 @@ The data structure or algorithm at the heart of the project gets its own module,
 
 ## 5. Deploy
 
-Fly.io for anything web-shaped. Skip this step for pure-library projects.
+Render (free tier) for anything web-shaped — `render.yaml` declares the service and Render auto-deploys on every push to `main`. Pair with a free Neon Postgres for anything that needs persistence. Skip this step for pure-library projects.
 
 ## 6. Add a YAML entry
 
@@ -43,7 +43,7 @@ Fly.io for anything web-shaped. Skip this step for pure-library projects.
   tagline: <one sentence>
   concepts: [<Concept>, <Concept>]
   repo: https://github.com/jasmineanica/<repo-slug>
-  demo: https://<repo-slug>.fly.dev
+  demo: https://<repo-slug>.onrender.com
   status: live   # or wip
 ```
 
