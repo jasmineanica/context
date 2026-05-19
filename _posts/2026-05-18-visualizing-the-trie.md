@@ -131,39 +131,35 @@ graph TD
     P(("p"))
     A(("a<br/>(Ignored)"))
     X(("x<br/>(Ignored)"))
-
     Y(("y<br/>[MATCH #1: py]"))
     T(("t"))
     H(("h"))
     O(("o"))
     N(("n<br/>[MATCH #2: python]"))
 
-    linkStyle 0 stroke:#ff9100,stroke-width:4px;
-    linkStyle 1 stroke:#ff9100,stroke-width:4px;
-    linkStyle 4 stroke:#2979ff,stroke-width:3px,stroke-dasharray: 5 5;
-    linkStyle 5 stroke:#2979ff,stroke-width:3px,stroke-dasharray: 5 5;
-    linkStyle 6 stroke:#2979ff,stroke-width:3px,stroke-dasharray: 5 5;
-    linkStyle 7 stroke:#2979ff,stroke-width:3px,stroke-dasharray: 5 5;
-
-    classDef searchPath fill:#ffe0b2,stroke:#ff9100,stroke-width:3px;
-    classDef collectionWalk fill:#d1c4e9,stroke:#5e35b1,stroke-width:2px;
-    classDef matchNode fill:#b3e5fc,stroke:#01579b,stroke-width:4px;
-    classDef normal fill:#e1f5fe,stroke:#0277bd,stroke-width:1px;
-
-    class Root normal;
-    class A,X,T,H,O normal;
-    class P searchPath;
-    class Y,N matchNode;
-
     Root -- "Lookup 'p'" --> P
     P -- "Lookup 'y'" --> Y
     P -. "Ignored Branch" .-> A
-    A -- "" --> X
-
+    A --> X
     Y -. "DFS Walk" .-> T
-    T -- "" --> H
-    H -- "" --> O
-    O -- "" --> N
+    T --> H
+    H --> O
+    O --> N
+
+    linkStyle 0 stroke:#ff9100,stroke-width:4px
+    linkStyle 1 stroke:#ff9100,stroke-width:4px
+    linkStyle 4 stroke:#2979ff,stroke-width:3px,stroke-dasharray: 5 5
+    linkStyle 5 stroke:#2979ff,stroke-width:3px,stroke-dasharray: 5 5
+    linkStyle 6 stroke:#2979ff,stroke-width:3px,stroke-dasharray: 5 5
+    linkStyle 7 stroke:#2979ff,stroke-width:3px,stroke-dasharray: 5 5
+
+    classDef searchPath fill:#ffe0b2,stroke:#ff9100,stroke-width:3px
+    classDef matchNode fill:#b3e5fc,stroke:#01579b,stroke-width:4px
+    classDef normal fill:#e1f5fe,stroke:#0277bd,stroke-width:1px
+
+    class Root,A,X,T,H,O normal
+    class P searchPath
+    class Y,N matchNode
 ```
 
 ## Two takeaways
