@@ -8,7 +8,7 @@ theme: minima
 
 header_pages:
   - projects.md
-  - about.md
+  - posts.md
 
 plugins:
   - jekyll-feed

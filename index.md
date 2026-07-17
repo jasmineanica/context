@@ -1,6 +1,7 @@
 ---
-layout: home
-title: Home
+layout: page
+title: About
+permalink: /
 ---
 
-Welcome to Jasmine Learnings. Recent posts are listed below.
+{% include about.html %}
