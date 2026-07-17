@@ -1,3 +1,11 @@
+- name: The Pitt Triage Engine
+  slug: pitt-triage-engine
+  tagline: Async ER-intake pipeline — Claude extraction, live openFDA drug-interaction checks, ESI triage scoring
+  concepts: [FastAPI, GraphQL, Celery, PostgreSQL, Claude tool-use, openFDA]
+  repo: https://github.com/jasmineanica/the-pitt-triage-engine
+  demo: https://pitt-triage-engine.onrender.com
+  status: live
+
 - name: Spend Lens
   slug: spend-lens
   tagline: Stateless spending analyzer — categorize, chart, and report with nothing stored
