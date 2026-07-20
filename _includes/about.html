@@ -28,6 +28,9 @@
   .role .meta { color: #4a553f; font-size: 0.9rem; margin: 0 0 0.6rem 0; }
   .role ul { margin: 0; padding-left: 1.1rem; }
   .role li { margin-bottom: 0.4rem; }
+  .role .links { margin: 0 0 0.6rem 0; font-size: 0.9rem; }
+  .role .links a { font-weight: 600; margin-right: 0.75rem; }
+  .role .tools { margin: 0.7rem 0 0 0; }
 
   .skill-group { margin-bottom: 0.85rem; }
   .skill-group .label { font-weight: 600; color: #3d5430; display: block; margin-bottom: 0.3rem; }
@@ -49,7 +52,7 @@ Hi — I'm Jasmine, a software engineer based in the Bay Area (Albany, CA). I sp
 the last several years at LinkedIn building backend systems and data ingestion
 pipelines at scale, and I started this site to keep learning in the open: writing
 up the data structures, algorithms, and AI ideas I'm working through, and shipping
-small projects from them.
+full-stack, AI-powered projects from them — several deployed and linked below.
 </p>
 
 <div class="open-banner">
@@ -94,6 +97,54 @@ delivery and turn messy data into real product value.
 </div>
 
 <div class="about-section">
+<h2>Projects</h2>
+
+<div class="role">
+  <h3>The Pitt Triage Engine</h3>
+  <p class="links">
+    <a href="https://pitt-triage-engine.onrender.com">Live demo</a>
+    <a href="https://github.com/jasmineanica/the-pitt-triage-engine">Source</a>
+  </p>
+  <ul>
+    <li>Built an asynchronous medical-intake pipeline that turns free-text ER shorthand into structured patient data with an LLM (Claude tool-use), validates medications against live openFDA drug labels, and assigns an ESI-inspired triage priority via a deterministic rules engine.</li>
+    <li>Designed a GraphQL API that hands work to a Celery/Redis worker over PostgreSQL, with real-time per-stage progress, a per-IP rate limiter to bound LLM cost, and a Dockerized single-service demo mode for free hosting.</li>
+  </ul>
+  <p class="tools">
+    <span class="tag">FastAPI</span><span class="tag">Strawberry GraphQL</span><span class="tag">Celery</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy 2.0</span><span class="tag">Alembic</span><span class="tag">Anthropic Claude</span><span class="tag">openFDA</span><span class="tag">Docker</span><span class="tag">pytest</span>
+  </p>
+</div>
+
+<div class="role">
+  <h3>Spend Lens</h3>
+  <p class="links">
+    <a href="https://spend-lens-kwr7.onrender.com">Live demo</a>
+    <a href="https://github.com/jasmineanica/spend-lens">Source</a>
+  </p>
+  <ul>
+    <li>Built a privacy-first, stateless spending analyzer that categorizes transactions (keyword rules + keyless Wikidata enrichment), charts spending by category and Needs/Wants/Savings bucket, answers free-text questions like “how much did I spend on coffee?”, and exports a monthly PDF — all in-memory, with nothing persisted.</li>
+    <li>Ingests Chase/Venmo notification emails, <code>.eml</code>, and Google-Takeout <code>.mbox</code> exports with streamed progress for large files, and generates the report client-side for instant, zero-cost downloads.</li>
+  </ul>
+  <p class="tools">
+    <span class="tag">FastAPI</span><span class="tag">pandas</span><span class="tag">Chart.js</span><span class="tag">Wikidata API</span><span class="tag">WeasyPrint</span><span class="tag">Docker</span>
+  </p>
+</div>
+
+<div class="role">
+  <h3>SM-2 Flashcards</h3>
+  <p class="links">
+    <a href="https://sm2-flashcards.onrender.com">Live demo</a>
+    <a href="https://github.com/jasmineanica/sm2-flashcards">Source</a>
+  </p>
+  <ul>
+    <li>Implemented the SM-2 spaced-repetition scheduler for interview prep, backed by a trie for prefix search, a priority queue for due-card ordering, and a hash map for lookups.</li>
+  </ul>
+  <p class="tools">
+    <span class="tag">FastAPI</span><span class="tag">Trie</span><span class="tag">Priority Queue</span><span class="tag">Hash Map</span><span class="tag">SM-2 Algorithm</span>
+  </p>
+</div>
+</div>
+
+<div class="about-section">
 <h2>Education</h2>
 
 <div class="role">
@@ -112,12 +163,17 @@ delivery and turn messy data into real product value.
 
 <div class="skill-group">
   <span class="label">Data Engineering</span>
-  <span class="tag">ETL Pipelines</span><span class="tag">Batch Processing</span><span class="tag">Data Optimization</span><span class="tag">Kafka</span><span class="tag">Apache Airflow</span>
+  <span class="tag">ETL Pipelines</span><span class="tag">Batch Processing</span><span class="tag">Data Optimization</span><span class="tag">Kafka</span><span class="tag">Apache Airflow</span><span class="tag">pandas</span>
 </div>
 
 <div class="skill-group">
   <span class="label">Backend &amp; Architecture</span>
-  <span class="tag">RESTful APIs</span><span class="tag">Microservices</span><span class="tag">Systems Design</span><span class="tag">Design Patterns</span><span class="tag">Docker</span><span class="tag">Kubernetes</span>
+  <span class="tag">FastAPI</span><span class="tag">GraphQL</span><span class="tag">RESTful APIs</span><span class="tag">Microservices</span><span class="tag">Celery</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span class="tag">Systems Design</span><span class="tag">Design Patterns</span><span class="tag">Docker</span><span class="tag">Kubernetes</span>
+</div>
+
+<div class="skill-group">
+  <span class="label">AI &amp; LLM</span>
+  <span class="tag">Anthropic Claude</span><span class="tag">LLM tool-use</span><span class="tag">Structured extraction</span><span class="tag">Prompt engineering</span><span class="tag">LLM-powered pipelines</span>
 </div>
 
 <div class="skill-group">
